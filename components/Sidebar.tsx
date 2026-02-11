@@ -179,9 +179,22 @@ const Sidebar: React.FC<SidebarProps> = ({ config, setConfig, onDownload }) => {
                 </div>
             </div>
 
-            {/* Logo Upload */}
+            {/* Logo Selection */}
             <div>
-                <label className="block text-xs font-bold text-gray-400 mb-3 uppercase">شعار الشركة (Logo)</label>
+                <label className="block text-xs font-bold text-gray-400 mb-3 uppercase">اختر شعاراً جاهزاً</label>
+                <div className="grid grid-cols-4 gap-2 mb-4">
+                    {['Logo.svg', 'Logo (1).svg', 'Logo (2).svg', 'alinvestor white.svg'].map((logo) => (
+                        <button
+                            key={logo}
+                            onClick={() => setConfig(prev => ({ ...prev, logoUrl: `/logos/${logo}` }))}
+                            className={`p-1 rounded-lg bg-slate-800 border-2 transition-all hover:bg-slate-700 ${config.logoUrl === `/logos/${logo}` ? 'border-teal-500' : 'border-transparent'}`}
+                        >
+                            <img src={`/logos/${logo}`} alt={logo} className="w-full h-8 object-contain" />
+                        </button>
+                    ))}
+                </div>
+
+                <label className="block text-xs font-bold text-gray-400 mb-3 uppercase">أو ارفع شعارك الخاص</label>
                 <label className="flex flex-col items-center justify-center w-full h-24 border-2 border-slate-700 border-dashed rounded-xl cursor-pointer bg-slate-800/50 hover:bg-slate-800 hover:border-teal-500 transition-all group">
                     <div className="flex flex-col items-center justify-center pt-3 pb-4 text-slate-500 group-hover:text-teal-400 transition-colors">
                         <IconImage />
@@ -201,7 +214,7 @@ const Sidebar: React.FC<SidebarProps> = ({ config, setConfig, onDownload }) => {
                 {config.logoUrl && (
                     <button 
                         onClick={() => setConfig(prev => ({ ...prev, logoUrl: null }))}
-                        className="text-[10px] text-red-400 mt-2 hover:text-red-300 w-full text-right underline"
+                        className="text-[10px] text-red-400 mt-2 hover:text-red-300 w-full text-right underline font-bold"
                     >
                         حذف الشعار
                     </button>
