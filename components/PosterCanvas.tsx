@@ -151,13 +151,13 @@ const PosterCanvas: React.FC<PosterCanvasProps> = ({ config, canvasRef }) => {
         {/* Footer Section */}
         <div className="poster-footer relative z-10 flex justify-between items-end px-6 pb-6 pt-12 w-full bg-gradient-to-t from-black/80 via-black/20 to-transparent shrink-0">
           <div className="flex items-center gap-2 mb-0.5">
-            <div className={`poster-dot w-1.5 h-1.5 rounded-full shadow-[0_0_8px_currentColor]`} style={{ backgroundColor: accentColor, color: accentColor }}></div>
-            <span className={`poster-footer-website text-[11px] font-medium font-sans opacity-80 tracking-widest uppercase`} style={{ color: accentColor }}>
+            <div className={`poster-dot w-1 h-1 rounded-full shadow-[0_0_6px_currentColor]`} style={{ backgroundColor: accentColor, color: accentColor }}></div>
+            <span className={`poster-footer-website text-[9px] font-medium font-sans opacity-70 tracking-widest uppercase`} style={{ color: accentColor }}>
               {website}
             </span>
           </div>
 
-          <div className={`poster-footer-page text-xl font-black opacity-30 tracking-tight leading-none`} style={{ color: accentColor }}>
+          <div className={`poster-footer-page text-sm font-black opacity-30 tracking-tight leading-none`} style={{ color: accentColor }}>
             {pageNumber}
           </div>
         </div>

@@ -62,13 +62,13 @@ const Sidebar: React.FC<SidebarProps> = ({ config, setConfig, onDownload }) => {
 
     const themes = [
         { name: 'هوية مبدئية', accent: '#0ea5e9', secondary: '#0B1120' }, // Sky Blue / Deep Navy
-        { name: 'فخامة ملكية', accent: '#EAB308', secondary: '#0A0A0A' }, // Premium Gold / Pure Black
-        { name: 'نمو مستدام', accent: '#10B981', secondary: '#022C22' }, // Emerald / Deep Forest
-        { name: 'ثقة مالية', accent: '#3B82F6', secondary: '#0F172A' }, // Royal Blue / Slate 900
-        { name: 'رؤية مستقبلية', accent: '#8B5CF6', secondary: '#2E1065' }, // Violet / Deep Purple
-        { name: 'طاقة وحيوية', accent: '#F43F5E', secondary: '#4C0519' }, // Rose / Deep Red
-        { name: 'ابتكار وإبداع', accent: '#F97316', secondary: '#431407' }, // Vibrant Orange / Dark Brown
-        { name: 'رسمي واحترافي', accent: '#94A3B8', secondary: '#020617' }, // Silver / Very Dark Slate
+        { name: 'أخبار اقتصادية', accent: '#3b82f6', secondary: '#0f172a' }, // Solid Blue / Slate 900
+        { name: 'مؤشرات وأسواق', accent: '#10B981', secondary: '#022C22' }, // Emerald (Bull Market) / Deep Forest
+        { name: 'تحليل مالي', accent: '#EAB308', secondary: '#1A1A1A' }, // Yellow (Highlight) / Dark Charcoal
+        { name: 'منصة تعليمية', accent: '#8B5CF6', secondary: '#2E1065' }, // Violet / Deep Purple
+        { name: 'تنبيه عاجل', accent: '#EF4444', secondary: '#450A0A' }, // Red (Bear Market/Alert) / Deep Red
+        { name: 'الاستثمار الآمن', accent: '#0D9488', secondary: '#134E4A' }, // Teal / Dark Teal
+        { name: 'الاقتصاد الكلي', accent: '#94A3B8', secondary: '#020617' }, // Silver / Very Dark Slate
     ];
 
     const cssSnippets = [
