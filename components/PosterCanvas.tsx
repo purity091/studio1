@@ -82,10 +82,10 @@ const PosterCanvas: React.FC<PosterCanvasProps> = ({ config, canvasRef }) => {
         </div>
 
         {/* Top Header Section */}
-        <div className="poster-header relative z-10 flex justify-between items-center p-8 shrink-0">
+        <div className="poster-header relative z-10 flex justify-between items-center px-8 py-6 shrink-0">
           {/* Right Side: Logo + Brand Name */}
-          <div className="flex items-center gap-4">
-            <div className="poster-logo-icon bg-white/5 p-1 rounded-lg backdrop-blur-sm border border-white/10 w-[48px] h-[48px] flex items-center justify-center overflow-hidden shrink-0">
+          <div className="flex items-center gap-3">
+            <div className="poster-logo-icon bg-white/5 p-1.5 rounded-xl backdrop-blur-sm border border-white/10 w-[56px] h-[56px] flex items-center justify-center overflow-hidden shrink-0">
               {logoUrl ? (
                 <img src={logoUrl} alt="Logo" className="w-full h-full object-contain" />
               ) : (
@@ -93,30 +93,30 @@ const PosterCanvas: React.FC<PosterCanvasProps> = ({ config, canvasRef }) => {
               )}
             </div>
             <div className="flex flex-col items-start gap-1">
-              <span className={`poster-brand-main text-lg font-bold leading-snug`} style={{ color: accentColor }}>
+              <span className={`poster-brand-main text-xl font-bold leading-none mt-1`} style={{ color: accentColor }}>
                 {topLeftText.split(' ')[0]} {topLeftText.split(' ')[1]}
               </span>
-              <span className="poster-brand-sub text-[10px] text-gray-300 border-b border-gray-600 pb-1 pr-6 opacity-80">
+              <span className="poster-brand-sub text-[11px] text-gray-300 border-b border-gray-600/50 pb-1.5 pr-6 opacity-90 leading-none mt-1">
                 {topLeftText.split(' ').slice(2).join(' ')}
               </span>
             </div>
           </div>
 
           {/* Left Side: Investor Name */}
-          <div className="text-left">
-            <div className="poster-logo-text text-xl font-bold text-white font-sans leading-none">{topRightText}</div>
+          <div className="text-left mt-1">
+            <div className="poster-logo-text text-2xl font-black text-white font-sans leading-none tracking-wide">{topRightText}</div>
           </div>
         </div>
 
         {/* Main Content Area */}
         <div className="poster-body relative z-10 flex-1 flex flex-col items-center justify-center -mt-8 px-6 text-center">
 
-          <h1 className="poster-headline text-[38px] font-black text-white mb-3 shrink-0"
+          <h1 className="poster-headline text-[34px] font-black text-white mb-2 shrink-0"
             style={{ lineHeight: '1.2', textShadow: '0 4px 20px rgba(0,0,0,0.6)' }}>
             {headline}
           </h1>
 
-          <h2 className={`poster-subheadline text-xl font-bold mb-8 shrink-0`}
+          <h2 className={`poster-subheadline text-lg font-bold mb-6 shrink-0`}
             style={{ color: accentColor, textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
             {subHeadline}
           </h2>
@@ -149,15 +149,15 @@ const PosterCanvas: React.FC<PosterCanvasProps> = ({ config, canvasRef }) => {
         </div>
 
         {/* Footer Section */}
-        <div className="poster-footer relative z-10 flex justify-between items-end p-6 w-full bg-gradient-to-t from-black/80 via-black/20 to-transparent shrink-0">
-          <div className="flex items-center gap-2">
-            <div className={`poster-dot w-2 h-2 rounded-full shadow-[0_0_10px_currentColor]`} style={{ backgroundColor: accentColor, color: accentColor }}></div>
-            <span className={`poster-footer-website text-sm font-sans opacity-90`} style={{ color: accentColor }}>
+        <div className="poster-footer relative z-10 flex justify-between items-end px-8 pb-8 pt-12 w-full bg-gradient-to-t from-black/80 via-black/20 to-transparent shrink-0">
+          <div className="flex items-center gap-3 mb-1">
+            <div className={`poster-dot w-2.5 h-2.5 rounded-full shadow-[0_0_12px_currentColor]`} style={{ backgroundColor: accentColor, color: accentColor }}></div>
+            <span className={`poster-footer-website text-base font-bold font-sans opacity-95 tracking-wide`} style={{ color: accentColor }}>
               {website}
             </span>
           </div>
 
-          <div className={`poster-footer-page text-3xl font-black opacity-40`} style={{ color: accentColor }}>
+          <div className={`poster-footer-page text-4xl font-black opacity-30 tracking-tighter`} style={{ color: accentColor }}>
             {pageNumber}
           </div>
         </div>
