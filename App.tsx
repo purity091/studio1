@@ -64,11 +64,11 @@ function App() {
     subHeadline: "تعلم التحليل المالي",
     topRightText: "المستثمر",
     topLeftText: "النهضة الاقتصادية العربية",
-    website: "al-investor.com",
-    pageNumber: "0",
+    website: "منصة المستثمر",
+    pageNumber: "al-investor.com",
     ctaText: "اسحب الشاشة",
-    accentColor: "#2dd4bf", // Teal-400
-    secondaryColor: "#0f172a",
+    accentColor: "#0ea5e9", // Sky Blue
+    secondaryColor: "#0B1120", // Deep Navy
     imageUrl: DEFAULT_IMAGE,
     generatedImageBase64: null,
     customCSS: "",
