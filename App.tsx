@@ -63,7 +63,7 @@ function App() {
     headline: "أتعرف كيفية قراءة مؤشرات القوة الشرائية الحقيقية",
     subHeadline: "تعلم التحليل المالي",
     topRightText: "المستثمر",
-    topLeftText: "النهضة الاقتصادية العربية",
+    topLeftText: "منصة المستثمر الاقتصادية",
     website: "منصة المستثمر",
     pageNumber: "al-investor.com",
     ctaText: "اسحب الشاشة",
