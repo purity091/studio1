@@ -1,0 +1,319 @@
+/* PosterCanvas.css */
+
+/* .poster-wrapper: The main container for the editor */
+.poster-wrapper {
+  flex: 1;
+  height: 100%;
+  background-color: #020617; /* Slate 950 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow: auto;
+  position: relative;
+}
+
+/* .poster-editor-pattern: The subtle dotted background in the editor */
+.poster-editor-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 2px 2px, #334155 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* .poster-canvas: The actual poster area that gets exported */
+.poster-canvas {
+  position: relative;
+  width: 450px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: all 0.3s;
+  /* Note: Additional box-shadow and bg-color are set inline per config */
+}
+
+/* Texture overlays */
+.poster-noise-texture {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: screen;
+}
+
+/* Blurred glow effects */
+.poster-ambient-glow-top {
+  position: absolute;
+  top: -10%;
+  right: -15%;
+  width: 70%;
+  height: 50%;
+  border-radius: 100%;
+  filter: blur(90px);
+  opacity: 0.15;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.poster-ambient-glow-bottom {
+  position: absolute;
+  bottom: -10%;
+  left: -15%;
+  width: 60%;
+  height: 50%;
+  border-radius: 100%;
+  filter: blur(90px);
+  opacity: 0.1;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 0;
+}
+
+/* Wavy background lines */
+.poster-background-waves {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- Header Section --- */
+.poster-header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  flex-shrink: 0;
+}
+
+.poster-header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.poster-logo-icon {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.poster-logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.poster-brand-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.125rem;
+}
+
+.poster-brand-main {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 0.125rem;
+}
+
+.poster-brand-sub {
+  font-size: 9px;
+  color: #9ca3af; /* Gray 400 */
+  border-bottom: 1px solid rgba(75, 85, 99, 0.5);
+  padding-bottom: 0.25rem;
+  padding-right: 1rem;
+  opacity: 0.9;
+  line-height: 1;
+  margin-top: 0.125rem;
+}
+
+.poster-header-left {
+  text-align: left;
+  margin-top: 0.125rem;
+}
+
+.poster-investor-name {
+  font-size: 15px;
+  font-weight: 900;
+  color: white;
+  font-family: sans-serif;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* --- Main Content Section --- */
+.poster-main-content {
+  position: relative;
+  z-index: 10;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Changed from center to start */
+  padding-top: 1rem; /* Added padding to top */
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-align: center;
+  gap: 1.5rem; /* Added gap between title, subtitle and image */
+}
+
+.poster-headline {
+  font-size: 40px; /* Slightly reduced large font to fit better */
+  font-weight: 900;
+  color: white;
+  margin-bottom: 0.5rem;
+  flex-shrink: 0;
+  line-height: 1.2;
+  text-shadow: 0 4px 25px rgba(0,0,0,0.7);
+}
+
+.poster-subheadline {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+  opacity: 0.9;
+  max-width: 90%;
+  line-height: 1.4;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Container for the central image */
+.poster-image-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.poster-accent-blob {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.35;
+  mix-blend-mode: screen;
+}
+
+.poster-main-image {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.5s;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.poster-no-image-placeholder {
+  position: relative;
+  z-index: 10;
+  width: 16rem;
+  height: 12rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  border: 2px dashed #4b5563; /* Gray 600 */
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af; /* Gray 400 */
+  font-size: 0.875rem;
+}
+
+/* Background question marks */
+.poster-decoration-1 {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  font-size: 4.5rem;
+  font-weight: 900;
+  opacity: 0.2;
+  transform: rotate(-15deg);
+  user-select: none;
+}
+
+.poster-decoration-2 {
+  position: absolute;
+  top: -20px;
+  left: 60px;
+  font-size: 3rem;
+  font-weight: 900;
+  opacity: 0.1;
+  transform: rotate(10deg);
+  user-select: none;
+}
+
+/* --- Footer Section --- */
+.poster-footer {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2), transparent);
+  flex-shrink: 0;
+}
+
+.poster-footer-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.125rem;
+}
+
+.poster-footer-dot {
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 9999px;
+  box-shadow: 0 0 6px currentColor;
+}
+
+.poster-footer-website {
+  font-size: 9px;
+  font-weight: 500;
+  font-family: sans-serif;
+  opacity: 0.7;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.poster-footer-page {
+  font-size: 0.875rem;
+  font-weight: 900;
+  opacity: 0.3;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
