@@ -17,6 +17,7 @@ const PosterCanvas: React.FC<PosterCanvasProps> = ({ config, canvasRef }) => {
     imageUrl,
     generatedImageBase64,
     topLeftText,
+    brandSubText,
     topRightText,
     website,
     pageNumber,
@@ -90,10 +91,10 @@ const PosterCanvas: React.FC<PosterCanvasProps> = ({ config, canvasRef }) => {
             </div>
             <div className="poster-brand-container">
               <span className="poster-brand-main" style={{ color: accentColor }}>
-                {topLeftText.split(' ')[0]} {topLeftText.split(' ')[1]}
+                {topLeftText}
               </span>
               <span className="poster-brand-sub">
-                {topLeftText.split(' ').slice(2).join(' ')}
+                {brandSubText}
               </span>
             </div>
           </div>

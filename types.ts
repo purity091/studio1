@@ -3,6 +3,7 @@ export interface PosterConfig {
   subHeadline: string;
   topRightText: string;
   topLeftText: string;
+  brandSubText: string;
   website: string;
   pageNumber: string;
   ctaText: string;

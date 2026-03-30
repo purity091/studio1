@@ -4,7 +4,8 @@
 .poster-wrapper {
   flex: 1;
   height: 100%;
-  background-color: #020617; /* Slate 950 */
+  background-color: #020617;
+  /* Slate 950 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,6 +34,7 @@
   overflow: hidden;
   flex-shrink: 0;
   transition: all 0.3s;
+  font-family: 'IBM Plex Sans Arabic', sans-serif !important;
   /* Note: Additional box-shadow and bg-color are set inline per config */
 }
 
@@ -137,10 +139,10 @@
 
 .poster-brand-sub {
   font-size: 9px;
-  color: #9ca3af; /* Gray 400 */
+  color: #9ca3af;
+  /* Gray 400 */
   border-bottom: 1px solid rgba(75, 85, 99, 0.5);
   padding-bottom: 0.25rem;
-  padding-right: 1rem;
   opacity: 0.9;
   line-height: 1;
   margin-top: 0.125rem;
@@ -155,7 +157,6 @@
   font-size: 15px;
   font-weight: 900;
   color: white;
-  font-family: sans-serif;
   line-height: 1;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -170,23 +171,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Changed from center to start */
-  padding-top: 1rem; /* Added padding to top */
+  justify-content: flex-start;
+  /* Changed from center to start */
+  padding-top: 1rem;
+  /* Added padding to top */
   padding-bottom: 2rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   text-align: center;
-  gap: 1.5rem; /* Added gap between title, subtitle and image */
+  gap: 1.5rem;
+  /* Added gap between title, subtitle and image */
 }
 
 .poster-headline {
-  font-size: 40px; /* Slightly reduced large font to fit better */
+  font-size: 40px;
+  /* Slightly reduced large font to fit better */
   font-weight: 900;
   color: white;
   margin-bottom: 0.5rem;
   flex-shrink: 0;
   line-height: 1.2;
-  text-shadow: 0 4px 25px rgba(0,0,0,0.7);
+  text-shadow: 0 4px 25px rgba(0, 0, 0, 0.7);
 }
 
 .poster-subheadline {
@@ -197,7 +202,7 @@
   opacity: 0.9;
   max-width: 90%;
   line-height: 1.4;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Container for the central image */
@@ -227,10 +232,10 @@
   height: 100%;
   width: 100%;
   border-radius: 0.75rem;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.5s;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -242,12 +247,14 @@
   height: 12rem;
   background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(4px);
-  border: 2px dashed #4b5563; /* Gray 600 */
+  border: 2px dashed #4b5563;
+  /* Gray 600 */
   border-radius: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #9ca3af; /* Gray 400 */
+  color: #9ca3af;
+  /* Gray 400 */
   font-size: 0.875rem;
 }
 
@@ -283,7 +290,7 @@
   align-items: flex-end;
   padding: 3rem 1.5rem 1.5rem 1.5rem;
   width: 100%;
-  background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2), transparent);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), transparent);
   flex-shrink: 0;
 }
 
@@ -304,7 +311,6 @@
 .poster-footer-website {
   font-size: 9px;
   font-weight: 500;
-  font-family: sans-serif;
   opacity: 0.7;
   letter-spacing: 0.1em;
   text-transform: uppercase;

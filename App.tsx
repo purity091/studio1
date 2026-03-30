@@ -62,8 +62,9 @@ function App() {
   const [config, setConfig] = useState<PosterConfig>({
     headline: "أتعرف كيفية قراءة مؤشرات القوة الشرائية الحقيقية",
     subHeadline: "تعلم التحليل المالي",
-    topRightText: "المستثمر",
-    topLeftText: "منصة المستثمر الاقتصادية",
+    topRightText: "توعوي",
+    topLeftText: "منصة المستثمر",
+    brandSubText: "في رحلة لتطوير الاقتصاد العربي",
     website: "منصة المستثمر",
     pageNumber: "al-investor.com",
     ctaText: "اسحب الشاشة",

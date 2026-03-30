@@ -141,7 +141,8 @@ const Sidebar: React.FC<SidebarProps> = ({ config, setConfig, onDownload }) => {
                         <InputGroup label="العنوان الرئيسي (كبير)" value={config.headline} onChange={(v) => handleTextChange('headline', v)} />
                         <InputGroup label="العنوان الفرعي (ملون)" value={config.subHeadline} onChange={(v) => handleTextChange('subHeadline', v)} />
                         <div className="h-px bg-slate-700/50"></div>
-                        <InputGroup label="النص العلوي (يمين)" value={config.topLeftText} onChange={(v) => handleTextChange('topLeftText', v)} />
+                        <InputGroup label="اسم المنصة (رئيسي)" value={config.topLeftText} onChange={(v) => handleTextChange('topLeftText', v)} />
+                        <InputGroup label="وصف المنصة (فرعي)" value={config.brandSubText} onChange={(v) => handleTextChange('brandSubText', v)} />
                         <InputGroup label="النص العلوي (يسار)" value={config.topRightText} onChange={(v) => handleTextChange('topRightText', v)} />
                         <InputGroup label="رابط الموقع" value={config.website} onChange={(v) => handleTextChange('website', v)} />
                     </div>
